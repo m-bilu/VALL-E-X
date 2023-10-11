@@ -79,7 +79,7 @@ def make_prompt(name, audio_prompt_path, transcript=None):
     message = f"Detected language: {lang_pr}\n Detected text {text_pr}\n"
 
     # save as npz file
-    save_path = os.path.join("./customs/", f"{name}.npz")
+    save_path = os.path.join("/content/SSM/VALL_E_X/utils/customs/", f"{name}.npz")
     np.savez(save_path, audio_tokens=audio_tokens, text_tokens=text_tokens, lang_code=lang2code[lang_pr])
     logging.info(f"Successful. Prompt saved to {save_path}")
 
