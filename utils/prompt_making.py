@@ -82,6 +82,7 @@ def make_prompt(name, audio_prompt_path, transcript=None):
     save_path = os.path.join("/content/SSM/VALL_E_X/utils/customs/", f"{name}.npz")
     np.savez(save_path, audio_tokens=audio_tokens, text_tokens=text_tokens, lang_code=lang2code[lang_pr])
     logging.info(f"Successful. Prompt saved to {save_path}")
+    return save_path
 
 
 def make_transcript(name, wav, sr, transcript=None):
