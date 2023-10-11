@@ -16,6 +16,8 @@ else:
     pathlib.WindowsPath = pathlib.PosixPath
 
 import numpy as np
+import sys
+sys.path.append('/content/SSM/VALL_E_X')        
 from data.tokenizer import (
     AudioTokenizer,
     tokenize_audio,
